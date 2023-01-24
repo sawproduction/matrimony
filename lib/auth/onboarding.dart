@@ -41,6 +41,10 @@ class OnBoardingScreen extends StatelessWidget {
                 ),
               ),
               GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: () {
+                  Navigator.pushNamed(context, 'login');
+                },
                 child: Container(
                   padding: EdgeInsets.all(width * 0.02),
                   color: Colors.red,
