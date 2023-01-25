@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:matrimony/auth/otp/otp.dart';
 import 'package:matrimony/constants/colors.dart';
 import 'package:matrimony/constants/defaultbtn.dart';
 
@@ -108,6 +109,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       enabledBorder: OutlineInputBorder())),
               Center(
                 child: DefaultButton(
+                  press: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>OTP_Screen()));
+                  },
                     padding: EdgeInsets.symmetric(
                         horizontal: width * 0.35, vertical: height * 0.01),
                     text: "Continue"),

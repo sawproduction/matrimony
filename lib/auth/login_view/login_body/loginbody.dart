@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:matrimony/configuration/front_end.dart';
+import 'package:matrimony/elements/bottombar.dart';
 import 'package:matrimony/elements/button.dart';
 import 'package:matrimony/elements/inputtextfeild.dart';
 import 'package:matrimony/addphoto_view/addphoto.screen.dart';
@@ -17,6 +18,7 @@ class _Login_bodyState extends State<Login_body> {
     final emailTextEditController = new TextEditingController();
     final passwordTextEditController = new TextEditingController();
     return Scaffold(
+
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -67,7 +69,7 @@ class _Login_bodyState extends State<Login_body> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Add_Photo_screen()));
+                          builder: (context) => BottomBar()));
                 },
                 color: Colors.white,
                 bordercolor: FrontEndConfigs.kprimerycolor,

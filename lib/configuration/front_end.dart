@@ -28,7 +28,13 @@ class CustomStyle {
     fontFamily: "Montserrat",
     fontWeight: FontWeight.w400,
     fontSize: 14,
-    color: Colors.black
+    color: Colors.black38
+  );
+  static final Montserratsetting = TextStyle(
+      fontFamily: "Montserrat",
+      fontWeight: FontWeight.w600,
+      fontSize: 16,
+      color: Colors.black
   );
   static final Poppinsnormal = TextStyle(
       fontFamily: "Poppins Medium",

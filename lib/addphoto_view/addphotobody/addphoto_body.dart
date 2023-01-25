@@ -62,7 +62,48 @@ class Add_photo_body extends StatelessWidget {
           SizedBox(
             height: 40,
           ),
-          Padding(
+      SizedBox(
+        height: 115,
+        width: 115,
+        child: Stack(
+          clipBehavior: Clip.none,
+          fit: StackFit.expand,
+          children: [
+            CircleAvatar(
+              backgroundColor: Color(0xffD9D9D9),
+            ),
+            Positioned(
+                right: -16,
+                bottom: 0,
+                child: Column(
+
+                  children: [
+                    Container(
+                      height: 46,
+                      width: 46,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                          gradient: LinearGradient(
+                            begin: Alignment.topRight,
+                            end: Alignment.topLeft,
+                            colors: [
+                              Color(0xff8EB0FD),
+                              Color(0xff5462DF),
+                            ],
+                          )
+                      ),
+                      child:Center(child: Icon(Icons.camera_alt_outlined,color: Colors.white,),),
+                    )
+
+                  ],
+                ))
+          ],
+        ),),
+        SizedBox(
+          height: 50,
+        ),
+
+        Padding(
             padding: const EdgeInsets.symmetric(horizontal: 70),
             child: CircularButton(
               text: 'Uplod From Mobile',
