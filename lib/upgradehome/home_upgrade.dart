@@ -1,16 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:matrimony/configuration/front_end.dart';
 import 'package:matrimony/res.dart';
-
-class Justnow_Screen extends StatefulWidget {
-  const Justnow_Screen({Key? key}) : super(key: key);
+class Upgrade_Home_Screen extends StatefulWidget {
+  const Upgrade_Home_Screen({Key? key}) : super(key: key);
 
   @override
-  State<Justnow_Screen> createState() => _Justnow_ScreenState();
+  State<Upgrade_Home_Screen> createState() => _Upgrade_Home_ScreenState();
 }
 
-class _Justnow_ScreenState extends State<Justnow_Screen> {
+class _Upgrade_Home_ScreenState extends State<Upgrade_Home_Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,13 +54,13 @@ class _Justnow_ScreenState extends State<Justnow_Screen> {
                                 color: Color(0xff375F90),
                               )),
                           Text(
-                            "Edit",
-                            style: TextStyle(
+                              "Edit",
+                              style: TextStyle(
                                 fontFamily: "Montserrat",
                                 fontWeight: FontWeight.w600,
                                 fontSize: 16,
                                 color: Color(0xff375F90),
-                            )
+                              )
                           ),
 
                         ],
@@ -96,36 +94,25 @@ class _Justnow_ScreenState extends State<Justnow_Screen> {
                                 // ],),
                                 Padding(
                                   padding:
-                                      const EdgeInsets.symmetric(horizontal: 5),
+                                  const EdgeInsets.symmetric(horizontal: 5),
                                   child: Row(
-
                                     children: [
                                       CircleAvatar(
                                         radius: 30,
                                         backgroundImage:
-                                            AssetImage("assets/pic.png"),
+                                        AssetImage("assets/pic.png"),
                                       ),
                                       SizedBox(
                                         width: 10,
                                       ),
                                       Column(
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                         children: [
-                                          Row(
-                                            mainAxisAlignment: MainAxisAlignment.end,
-                                            children: [
-                                              Text(
-                                                "MUS394028",
-                                                style: CustomStyle.Montserratmedium,
-                                              ),
-                                              SizedBox(
-                                                width: MediaQuery.of(context).size.width*0.43,
-                                              ),
-                                              Icon(Icons.more_vert_outlined),
-                                            ],
+                                          Text(
+                                            "MUS394028",
+                                            style: CustomStyle.Montserratmedium,
                                           ),
-
                                           Text(
                                             "Anjela johnson",
                                             style: TextStyle(
@@ -144,8 +131,7 @@ class _Justnow_ScreenState extends State<Justnow_Screen> {
                                             style: CustomStyle.Montserratmedium,
                                           ),
                                         ],
-                                      ),
-
+                                      )
                                     ],
                                   ),
                                 ),
@@ -162,7 +148,7 @@ class _Justnow_ScreenState extends State<Justnow_Screen> {
                                       horizontal: 5, vertical: 2),
                                   child: Row(
                                     mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                     children: [
                                       Container(
                                         height: 20,
@@ -244,3 +230,4 @@ class _Justnow_ScreenState extends State<Justnow_Screen> {
     );
   }
 }
+

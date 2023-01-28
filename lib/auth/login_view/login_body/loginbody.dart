@@ -4,6 +4,7 @@ import 'package:matrimony/elements/bottombar.dart';
 import 'package:matrimony/elements/button.dart';
 import 'package:matrimony/elements/inputtextfeild.dart';
 import 'package:matrimony/addphoto_view/addphoto.screen.dart';
+import 'package:matrimony/phoneverify_view/phoneverify.dart';
 
 class Login_body extends StatefulWidget {
   const Login_body({Key? key}) : super(key: key);
@@ -18,7 +19,6 @@ class _Login_bodyState extends State<Login_body> {
     final emailTextEditController = new TextEditingController();
     final passwordTextEditController = new TextEditingController();
     return Scaffold(
-
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -66,10 +66,8 @@ class _Login_bodyState extends State<Login_body> {
                 text: 'Login',
                 contcolor: FrontEndConfigs.kprimerycolor,
                 ontap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => BottomBar()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => BottomBar()));
                 },
                 color: Colors.white,
                 bordercolor: FrontEndConfigs.kprimerycolor,
@@ -82,7 +80,12 @@ class _Login_bodyState extends State<Login_body> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Phone_Verify()));
+                    },
                     child: Text(
                       "Log in via OTP",
                       style: CustomStyle.Montserrattextbutton,

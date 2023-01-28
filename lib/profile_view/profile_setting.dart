@@ -74,7 +74,7 @@ class _Profile_Setting_ScreenState extends State<Profile_Setting_Screen> {
                     ImageIcon(
                       AssetImage('assets/edit.png'),
                       color: Color(0xff375F90),
-                    )
+                    ),
                   ],
                 ),
               ),

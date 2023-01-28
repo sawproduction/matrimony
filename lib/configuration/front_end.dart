@@ -48,4 +48,10 @@ class CustomStyle {
       fontSize: 20,
       color: Color(0xff375F90),
   );
+  static final Poppinsnormals = TextStyle(
+      fontFamily: "Poppins Medium",
+      fontWeight: FontWeight.w500,
+      fontSize: 14,
+      color: Color(0xff353535),
+  );
 }

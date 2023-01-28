@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:matrimony/elements/tabbar.dart';
+import 'package:matrimony/profile_view/profile_body/profilebody_view.dart';
 import 'package:matrimony/profile_view/profile_setting.dart';
+import 'package:matrimony/search_view/searchscreen.dart';
+import 'package:matrimony/upgarde_view/upgradescreen.dart';
 class BottomBar extends StatefulWidget {
   const BottomBar({Key? key}) : super(key: key);
 
@@ -12,10 +15,10 @@ class _BottomBarState extends State<BottomBar> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     Tabbar_Screen(),
-    Text('Search Page', style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+    Search_Screen(),
     Search_Tabbar_Screen(),
-    Profile_Setting_Screen(),
-    Profile_Setting_Screen(),
+    upgradetabbar(),
+    Profile_body(),
   ];
 
   void _onItemTapped(int index) {
