@@ -15,6 +15,13 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController emailTextEditController = TextEditingController();
+
+  final  selectTextEditController = new TextEditingController();
+  final nameTextEditController = new TextEditingController();
+  final datepikTextEditController = new TextEditingController();
+  final setpasswordTextEditController = new TextEditingController();
+  final phonenumberTextEditController = new TextEditingController();
+  final mothertoungeTextEditController = new TextEditingController();
   List options = ["Self", "Parent", "Sibling", "Relative", "Friend"];
   int select_option = 0;
   List genders = ["Male", "Female"];
@@ -92,7 +99,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   behavior: HitTestBehavior.opaque,
                   onTap: () {
                     setState(() {
-                      select_option = index;
+                      curr_gender = index;
                     });
                   },
                   child: Container(
@@ -116,7 +123,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               TextFromField(
                 obscr: false,
                 HintText: 'Name',
-                textControler: emailTextEditController,
+                textControler: nameTextEditController,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -136,7 +143,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   width: double.infinity,
                   child: TextField(
                     obscureText:false,
-                    controller: emailTextEditController,
+                    controller: datepikTextEditController,
                     decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.black),
@@ -193,7 +200,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   width: double.infinity,
                   child: TextField(
                     obscureText:false,
-                    controller: emailTextEditController,
+                    controller: setpasswordTextEditController,
                     decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black),
@@ -261,6 +268,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         child: TextField(
                           obscureText: false,
                           keyboardType: TextInputType.number,
+                          controller: phonenumberTextEditController,
 
                           decoration: InputDecoration(
                             focusedBorder: OutlineInputBorder(
@@ -303,7 +311,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               TextFromField(
                 obscr: false,
                 HintText: 'Mother tongue',
-                textControler: emailTextEditController,
+                textControler: mothertoungeTextEditController,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -319,7 +327,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               TextFromField(
                 obscr: false,
                 HintText: 'Select',
-                textControler: emailTextEditController,
+                textControler: selectTextEditController,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),

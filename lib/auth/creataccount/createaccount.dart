@@ -16,6 +16,7 @@ class Create_Account_Screen extends StatefulWidget {
 
 class _Create_Account_ScreenState extends State<Create_Account_Screen> {
   final emailTextEditController = new TextEditingController();
+
   List options = ["Self", "Parent", "Sibling", "Relative", "Friend"];
   int select_option = 0;
   List<String> data = ["Country living in","Pakistan", "India", "America", "England", "BanglaDesh"];
